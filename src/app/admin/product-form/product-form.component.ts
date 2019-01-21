@@ -1,4 +1,7 @@
+import { ProductService } from './../../services/product.service';
+import { CategoryService } from './../../services/category.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product-form',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnInit {
+  categories$: Observable<any>;
 
-  constructor() { }
+  constructor(categoryService: CategoryService, private productService: ProductService) {
+    this.categories$ = categoryService.getCategories();
+  }
 
   ngOnInit() {
+  }
+
+  save(product) {
+    this.productService.create(product);
   }
 
 }
