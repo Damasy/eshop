@@ -9,7 +9,7 @@
     type="text" class="form-control" placeholder="Search...">
 </p>
 
-<data-table
+<!-- <data-table id="products-table"
   [items]="items"
   [itemCount]="itemCount"
   (reload)="reloadItems($event)"
@@ -18,32 +18,29 @@
     [property]="'title'"
     [header]="'Title'"
     [sortable]="true"
-    [resizable]="true"
-  >
+    [resizable]="true">
   </data-table-column>
 
   <data-table-column
     [property]="'price'"
     [header]="'Price'"
     [sortable]="true"
-    [resizable]="true"
-  >
+    [resizable]="true">
     <ng-template #datatableCell let-item="item">
       {{ item.price | currency:'USD':true }}
     </ng-template>
   </data-table-column>
 
   <data-table-column
-    [property]="'$key'"
-  >
+    [property]="'$key'">
     <ng-template #datatableCell let-item="item">
       <a [routerLink]="['/admin/products', item.$key]">Edit</a>
     </ng-template>
   </data-table-column>
 
-</data-table>
+</data-table> -->
 
-<!-- <table class="table">
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -60,4 +57,4 @@
       </td>
     </tr>
   </tbody>
-</table> -->
+</table>

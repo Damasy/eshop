@@ -28,7 +28,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
-import { DataTableModule } from 'angular-4-data-table';
+// import { DataTableModule } from 'angular-4-data-table';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,7 @@ import { DataTableModule } from 'angular-4-data-table';
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    DataTableModule,
+    // DataTableModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       {
