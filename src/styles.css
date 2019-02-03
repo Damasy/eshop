@@ -5,3 +5,7 @@
 body {
   /* padding: 20px; */
 }
+
+.card-img-top {
+  max-height: 250px;
+}

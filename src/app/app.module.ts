@@ -56,7 +56,7 @@ import { CustomFormsModule } from 'ng2-validation';
     AngularFirestoreModule,
     // DataTableModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: ProductsComponent },
       {
         path: 'products',
         component: ProductsComponent

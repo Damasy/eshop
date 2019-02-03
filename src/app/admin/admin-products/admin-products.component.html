@@ -44,6 +44,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Category</th>
       <th>Price</th>
       <th></th>
     </tr>
@@ -51,6 +52,7 @@
   <tbody>
     <tr *ngFor="let product of filteredProducts">
       <td>{{ product.payload.val().title }}</td>
+      <td>{{ product.payload.val().category }}</td>
       <td>{{ product.payload.val().price }}</td>
       <td>
         <a [routerLink]="['/admin/products', product.key]">Edit</a>
