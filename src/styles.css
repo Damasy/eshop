@@ -5,12 +5,3 @@
 body {
   /* padding: 20px; */
 }
-
-.card-img-top {
-  height: 200px;
-}
-.card-title {
-  margin-bottom: 0.75rem;
-  height: 70px;
-  overflow: hidden;
-}
