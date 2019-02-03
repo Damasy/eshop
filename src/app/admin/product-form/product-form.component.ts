@@ -21,11 +21,12 @@ export class ProductFormComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.categories$ = categoryService.getAll();
+    this.categories$ = this.categoryService.getAll();
 
     this.id = this.route.snapshot.paramMap.get('id');
     if (this.id) {
       this.productService.getProduct(this.id).pipe(take(1)).subscribe(p => this.product$ = p);
+      // console.log(this.product$);
     }
   }
 
