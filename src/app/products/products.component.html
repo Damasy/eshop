@@ -7,7 +7,7 @@
         <ng-container
           *ngFor="let product of filteredProducts; let i = index">
           <div class="col-4 mb-4">
-            <app-product-card [product]="product.payload.val()"></app-product-card>
+            <app-product-card [product]="product" [shopping-cart]="cart"></app-product-card>
           </div>
           <!-- <div *ngIf="(i + 1) % 4 == 0" class="w-100"></div> -->
         </ng-container>
