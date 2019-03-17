@@ -26,8 +26,11 @@ export class ProductCardComponent implements OnInit {
 
   getQuantity () {
     if (!this.shoppingCart) { return 0; }
-    const item =  this.shoppingCart.payload.val().items[this.product.key];
-    return item ? item.quantity : 0;
+    if (this.shoppingCart) {
+      console.log(this.shoppingCart);
+      const item =  this.shoppingCart.payload.val().items[this.product.key];
+      return item ? item.quantity : 0;
+    }
   }
 
   ngOnInit() {

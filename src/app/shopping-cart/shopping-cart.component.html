@@ -4,4 +4,26 @@
   <p>
     You have {{ cart.totalItemsCount }} items in your shopping cart
   </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let productId of cart.productIds">
+        <td>
+          {{ cart.items[productId].product.title }}
+        </td>
+        <td>
+          {{ cart.items[productId].quantity }}
+        </td>
+        <td>
+          {{ cart.items[productId].product.price | currency:'USD' }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </ng-container>
